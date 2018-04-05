@@ -1,0 +1,32 @@
+For exercise1
+In BTreeFile.findLeafPage, need to recursicely find the leaf page. For Internal page, recursively call itself until the current page is a leafpage. When it's leaf page level, return the corresponding page
+
+For exercise2
+The genernal idea is to split a page into two pages and add a new entry to parent page.
+For leafpage, the new entry is the middle value in the splited page, also the first value from the right child page
+For internal page, the new entry is the middle value in the splited page, and this value didn't appear in the child level
+And need to add the corresponding page in to dirtypages to maintain the buffer.
+
+For exercise3
+steal from leafpage left and right internal page.
+For leaf page, steal a tuple from right or left page, and update the parent.
+For internal, steal a tuple from left or right internal page, need to meantime maintain the child correcttly update.
+
+For exercise4
+merge peaf page: move all the tuples from the right page to the left page, need to delete the right pointer from parent
+merge internal page: move all the entries from the right page to the left page, need to pull down the the corresponding key and delete the corresponding key and right child pointer from the parent entry recursively.
+
+For exercise5
+not available
+
+Have realized all the exercises (except 5) in lab3
+
+Modify some method in bufferpool, some previous updates process are not correct.
+
+Spent near  20 hours(three days) to finish this lab.
+
+did the extra part, two new help class in BTreeFile: BTreeReverseSearchIterator and BTreeFileReverseIterator
+the two iterater are basicly modified from the non reverse version. In most cases, changing the direction or changing the condition of statements will accomplish this.
+one new class: BTreeReverseScan, modified from BTreeScan, change most direction of the iterator: iterator to reverseIterator.
+one new test class: BTreeReverseScanTest, modified from BTreeScanTest. Reverse the tuples, and change the scan to reverse scan.
+pass three cases: testSmall, testSmall and testRewindPredicates.
