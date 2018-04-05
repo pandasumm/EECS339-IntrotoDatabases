@@ -1,0 +1,23 @@
+For exercise1
+In predicate.java, make comparison through Field's compare method, and same for JoinPrediacte.java
+In filter.java, realize the fetchNext method by call the predicate.filter
+In Join.java, use two for loop to travase all the possible combination of child1 and child2
+For exercise2
+The genernal idea is to use two hashmap to store the value and the count. For different operator, use different logic to deal with. For stringAggregator, it's easier because only need to realize the count.
+And need to careful deal with the NO_GROUP, which could be trated as a apecial field.
+For exercise3
+These two classes are the most hard part in lab2. Have made a lot of minor mistakes.
+The header part is dealing with the bit control.
+In heapfile, the insert part is more complex when need to add a new page.
+In bufferpool, need to respectively the insert method, insert and update.
+For exercise4
+Not too hard, just follow the javadoc
+For exercise5
+use nested-loop to implement the eviction opreation.
+
+Didn't make any change to API
+
+Have realized all the elements in lab2
+
+Spent near  20 hours(three days) to finish this lab.
+Though I have passed all the test, still not clear about the bufferPoolWriteTest, posted it in Piazza https://piazza.com/class/jc26p5ppjak78w?cid=189

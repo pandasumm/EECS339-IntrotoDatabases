@@ -1,0 +1,25 @@
+For each exercise:
+Exercise 1:
+The first exercise is not hard, simply implement the method according to the Javadoc.
+
+Exercise 2:
+When doing the second exercise. To implement the addTable method in catalog, first I store the tables in a arraylist. And to deal with the duplicate name and duplicate ID cases, use a for loop to traverse all the tables to detect if there are such cases.
+
+Exercise 3:
+To implement the getPage method in bufferpool.java, use a arraylist to store all the pages. And traverse the pages to see the page is already in bufferpool. If in, return the page. If not in bufferpool, first check if the size of the buffer pool got to its capacity, if so remove the first page in buffer pool. Then add the new page into the buffer pool.
+For further LABs, if the page is already in buffer pool, put it to the rear of the buffer pool to implement we always remove the page which has not been used for the longest time.
+
+Exercise 4:
+The recordID and heapfileid are quite simple to implement according to the Javadoc.
+For the heappage file, need to be very careful about byte and bit. For instance, in isSlotUsed method, need to calculate which byte that contains the header and also which bit is actually representing the slot.
+
+Exercise 5:
+Heapfile iterator is the hardest part in this LAB, and made many mistakes when implementing it. When jumping to next page to get the next tuple, there may not be next page, iterator maybe null, need to carefully handle those cases.
+In heapfile, I added a new class heapfileIterator to realize the iterator
+
+Exercise 6:
+Quite simple to implement, but when doing the test for seqscan, many errors appear and all of which are from the prior part. 
+
+At last, I have passed all the test cases in LAB1.
+Spending about 30 hours in this LAB, and the hard part mostly from the exercise 6. before I started exercise 6, I have passed all the previous test cases, so didn't realize that there still could be errors in previous file. Spending a lot of time to locate the error. Maybe the test files could be better if the previous test cases could lacate these errors.
+I highly recommand to explain the relations between the classes in a high level first, got very confused when first facing so many files and no idea what they actually are. 
